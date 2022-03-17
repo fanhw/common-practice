@@ -1,4 +1,3 @@
-import com.fhw.practice.MainApplication;
 import com.fhw.practice.app.FactoryBeanTest;
 import com.fhw.practice.entiy.Student;
 import org.junit.jupiter.api.Test;

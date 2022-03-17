@@ -26,6 +26,11 @@ public class Main {
             System.out.println(method.getName());
         }
 
+        Field[] fields = targetClass.getDeclaredFields();
+        for (Field field:fields){
+            System.out.println(field.getName());
+        }
+
         /**
          * 获取指定方法并调用
          */
