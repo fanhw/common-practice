@@ -11,3 +11,34 @@ mybatis-plus:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
     map-underscore-to-camel-case: true
   mapper-locations: classpath*:/mapper/**/*.xml
+
+
+
+person:
+  name: '范浩文'
+  username: 范浩文啊
+  age: 18
+  pet:
+    name: 小狗
+    gender: male
+  animal:
+    - dog
+    - cat
+    - fish
+  interests: [足球，篮球]
+  friends:
+     - zhangsan is my best
+      friend
+     - "lisi\t"
+  children:
+    - name: xiaozhang
+      age: 18
+    - name: xiaoli
+      pets:
+        - a
+        - b
+    - aa: {aa: 1,bb: 2}
+    - [cc,dd]
+  student:
+    name: sakura
+  email: fanhaowena@163.com
