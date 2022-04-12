@@ -19,6 +19,7 @@ public class LogCostFilter implements Filter {
     @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
         long start = System.currentTimeMillis();
+        System.out.println("before001");
         filterChain.doFilter(servletRequest, servletResponse);
         System.out.println("Execute cost=" + (System.currentTimeMillis() - start));
     }

@@ -5,13 +5,13 @@ spring:
     username: root
     password: root
   application:
-    name:
+    name: common-practice
 mybatis-plus:
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
     map-underscore-to-camel-case: true
   mapper-locations: classpath*:/mapper/**/*.xml
-
+  type-aliases-package: com.fhw.practice.entiy
 
 
 person:

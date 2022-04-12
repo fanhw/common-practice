@@ -1,6 +1,7 @@
 package com.fhw.practice.config;
 
 import com.fhw.practice.interceptor.LogCostInterceptor;
+import com.fhw.practice.interceptor.LogCostInterceptor2;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
@@ -29,5 +30,8 @@ public class MyWebConfig implements WebMvcConfigurer {
     public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(new LogCostInterceptor())
                 .addPathPatterns("/**");
+        registry.addInterceptor(new LogCostInterceptor2())
+                .addPathPatterns("/**");
     }
+
 }

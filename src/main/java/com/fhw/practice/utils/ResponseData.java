@@ -46,8 +46,8 @@ public class ResponseData<T> {
 
     public static ResponseData fail() {
         ResponseData responseData = new ResponseData();
-        responseData.setCode(BizCodeEnum.UNKONW_EXCEPTION.getCode());
-        responseData.setMessage(BizCodeEnum.UNKONW_EXCEPTION.getMessage());
+        responseData.setCode(BizCodeEnum.UNKNOWN_EXCEPTION.getCode());
+        responseData.setMessage(BizCodeEnum.UNKNOWN_EXCEPTION.getMessage());
         return responseData;
     }
 

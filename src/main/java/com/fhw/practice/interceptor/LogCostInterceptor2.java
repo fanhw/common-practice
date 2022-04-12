@@ -9,22 +9,22 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * @author fhw
  * @version 1.0
- * @date 2022-03-10 00:22
+ * @date 2022-04-12 09:50
  */
 
 
-public class LogCostInterceptor implements HandlerInterceptor {
+public class LogCostInterceptor2 implements HandlerInterceptor {
     long start = System.currentTimeMillis();
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         start = System.currentTimeMillis();
-        System.out.println("beforeInterceptor001");
+        System.out.println("beforeInterceptor002");
         return true;
     }
 
     @Override
     public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler, ModelAndView modelAndView) throws Exception {
-        System.out.println("Interceptor cost="+(System.currentTimeMillis()-start));
+        System.out.println("Interceptor2 cost="+(System.currentTimeMillis()-start));
     }
 
     @Override

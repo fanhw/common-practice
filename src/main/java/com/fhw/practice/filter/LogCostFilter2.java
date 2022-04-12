@@ -12,11 +12,12 @@ import java.io.IOException;
 
 
 
-@WebFilter(urlPatterns = "/*",filterName = "LogCostFilter2")
+//@WebFilter(urlPatterns = "/*",filterName = "LogCostFilter2")
 public class LogCostFilter2 implements Filter {
     @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
         long start = System.currentTimeMillis();
+        System.out.println("before002");
         filterChain.doFilter(servletRequest, servletResponse);
         System.out.println("LogFilter2 Execute cost=" + (System.currentTimeMillis() - start));
     }

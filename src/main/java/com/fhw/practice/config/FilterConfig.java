@@ -1,6 +1,7 @@
 package com.fhw.practice.config;
 
 import com.fhw.practice.filter.LogCostFilter;
+import com.fhw.practice.filter.LogCostFilter2;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -19,7 +20,17 @@ public class FilterConfig {
         filterRegistrationBean.setFilter(new LogCostFilter());
         filterRegistrationBean.addUrlPatterns("/*");
         filterRegistrationBean.setName("LogCostFilter");
-        filterRegistrationBean.setOrder(1);
+        filterRegistrationBean.setOrder(-2);
         return filterRegistrationBean;
     }
+    @Bean
+    public FilterRegistrationBean filterRegistrationBean2() {
+        FilterRegistrationBean filterRegistrationBean = new FilterRegistrationBean();
+        filterRegistrationBean.setFilter(new LogCostFilter2());
+        filterRegistrationBean.addUrlPatterns("/*");
+        filterRegistrationBean.setName("LogCostFilter2");
+        filterRegistrationBean.setOrder(-1);
+        return filterRegistrationBean;
+    }
+
 }
