@@ -23,7 +23,7 @@ import org.springframework.test.context.web.WebAppConfiguration;
 public class SpringBootDemoApplicationTests {
     @Autowired
     private Person person;
-    @Value("#{11*2}")
+    @Value("${person.age:999}")
     private Integer age;
     @Autowired
     private ApplicationContext applicationContext;
@@ -43,6 +43,7 @@ public class SpringBootDemoApplicationTests {
     @Test
     @DisplayName("yaml配置转换")
     public void test01(){
+        System.out.println(person);
         person.getStudent().setAge(age);
         System.out.println(person);
     }

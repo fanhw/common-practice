@@ -1,5 +1,6 @@
 package com.fhw.practice.utils;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fhw.practice.exception.BizCodeEnum;
 import lombok.Data;
 
@@ -10,6 +11,7 @@ import lombok.Data;
  */
 
 @Data
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class ResponseData<T> {
     private int code;
     private String message;

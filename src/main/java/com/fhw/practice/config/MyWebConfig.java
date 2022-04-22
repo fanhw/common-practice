@@ -29,9 +29,9 @@ public class MyWebConfig implements WebMvcConfigurer {
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(new LogCostInterceptor())
-                .addPathPatterns("/**");
+                .addPathPatterns("/student/findAll");
         registry.addInterceptor(new LogCostInterceptor2())
-                .addPathPatterns("/**");
+                .addPathPatterns("/student/findAll");
     }
 
 }

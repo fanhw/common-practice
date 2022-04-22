@@ -28,4 +28,12 @@ public interface StudentService extends IService<Student> {
      * @return
      */
     void add(Student student);
+    /**
+     *
+     */
+     int modify(Student student);
+    /**
+     *
+     */
+    Student findById(Long id);
 }

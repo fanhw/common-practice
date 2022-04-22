@@ -29,7 +29,7 @@ public class Person {
     @Value("${person.name:fhw}")
     private String name;
     private String username;
-    @NotNull
+   // @NotNull
     private Integer age;
     private Map<String, Object> pet;
     private List<String> animal;

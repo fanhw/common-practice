@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 public class PracticeExceptionControllerAdvice {
     @ExceptionHandler(value = {Throwable.class})
     public ResponseData handleException(Throwable throwable) {
-        log.error("系统未知异常{},异常类型{}", throwable.getMessage(), throwable.getClass());
+        log.error("系统未知异常:{},异常类型:{}", throwable.getMessage(), throwable.getClass());
         return ResponseData.fail();
     }
 

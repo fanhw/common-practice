@@ -29,4 +29,16 @@ public class StudentServiceImpl extends ServiceImpl<StudentDao, Student> impleme
     public void add(Student student) {
         this.baseMapper.insert(student);
     }
+
+    @Override
+    public int modify(Student student) {
+        int i = this.baseMapper.updateById(student);
+        return i;
+    }
+
+    @Override
+    public Student findById(Long id) {
+        Student student = this.baseMapper.selectById(id);
+        return student;
+    }
 }

@@ -15,9 +15,9 @@ mybatis-plus:
 
 
 person:
-  name: '范浩文'
+  #name: '范浩文'
   username: 范浩文啊
-  age: 18
+  #age: 18
   pet:
     name: 小狗
     gender: male
@@ -29,7 +29,7 @@ person:
   friends:
      - zhangsan is my best
       friend
-     - "lisi\t"
+     - "lisi\n"
   children:
     - name: xiaozhang
       age: 18
@@ -41,4 +41,5 @@ person:
     - [cc,dd]
   student:
     name: sakura
+    age: 25
   email: fanhaowena@163.com
