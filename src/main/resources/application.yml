@@ -13,7 +13,21 @@ mybatis-plus:
   mapper-locations: classpath*:/mapper/**/*.xml
   type-aliases-package: com.fhw.practice.entiy
 
-
+our:
+  role:
+    sakura:
+      name: sakura
+      age: 18
+    monster:
+      name: huiliyi
+      age: 20
+role:
+  aa:
+    name: aa
+    age: 11
+  bb:
+    name: bb
+    age: 22
 person:
   #name: '范浩文'
   username: 范浩文啊

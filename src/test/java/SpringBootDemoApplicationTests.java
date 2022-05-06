@@ -1,5 +1,7 @@
 import com.fhw.practice.MainApplication;
 import com.fhw.practice.app.FactoryBeanTest;
+import com.fhw.practice.config.porp.PersonProp;
+import com.fhw.practice.config.porp.PersonProperties;
 import com.fhw.practice.entiy.Student;
 import com.fhw.practice.model.Person;
 import org.junit.jupiter.api.DisplayName;
@@ -46,6 +48,19 @@ public class SpringBootDemoApplicationTests {
         System.out.println(person);
         person.getStudent().setAge(age);
         System.out.println(person);
+    }
+
+
+    @Autowired
+    private PersonProp personProp;
+    @Test
+    @DisplayName("Sakura")
+    public void test02() {
+        PersonProperties sakura = personProp.getAa();
+        String fileName = "abcd.txt";
+        String ext = fileName.substring(fileName.lastIndexOf(".") + 1);
+        System.out.println(ext);
+        System.out.println(sakura);
     }
 
 }
