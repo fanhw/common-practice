@@ -64,18 +64,22 @@
                     <fork>true</fork>
                 </configuration>
             </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-pmd-plugin</artifactId>
-                <version>3.12.0</version>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>check</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
         </plugins>
     </build>
+<!--    <profiles>-->
+<!--        <profile>-->
+<!--            <id>sonar</id>-->
+<!--            <activation>-->
+<!--                <activeByDefault>true</activeByDefault>-->
+<!--            </activation>-->
+<!--            <properties>-->
+<!--                <sonar.jdbc.url>jdbc:jdbc://localhost:3306/sonar</sonar.jdbc.url>-->
+<!--                <sonar.jdbc.driver>com.mysql.jdbc.Driver</sonar.jdbc.driver>-->
+<!--                <sonar.jdbc.username>root</sonar.jdbc.username>-->
+<!--                <sonar.jdbc.password>root</sonar.jdbc.password>-->
+<!--                &lt;!&ndash; Sonar服务器访问地址 &ndash;&gt;-->
+<!--                <sonar.host.url>http://localhost:9000</sonar.host.url>-->
+<!--            </properties>-->
+<!--        </profile>-->
+<!--    </profiles>-->
 </project>
